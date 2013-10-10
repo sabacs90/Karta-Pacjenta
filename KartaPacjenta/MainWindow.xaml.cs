@@ -27,7 +27,7 @@ namespace KartaPacjenta
 
         private void signInButton_Click(object sender, RoutedEventArgs e)
         {
-            login.Text = "Proba logowania.";
+            login.Text = "Proba logowania!";
         }
 
 
