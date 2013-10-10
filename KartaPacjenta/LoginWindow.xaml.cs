@@ -19,11 +19,11 @@ using Npgsql;
 namespace KartaPacjenta
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
             login.Focus();
@@ -79,6 +79,14 @@ namespace KartaPacjenta
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+
+        private void EnterEvent(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                signInButton_Click(sender, null);
+            }
         }
 
 
