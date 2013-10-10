@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Npgsql;
 
-namespace KartaPacjenta
+namespace KartaPacjenta.Windows
 {
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
@@ -33,7 +33,10 @@ namespace KartaPacjenta
         {
             if (checkLoginForm(login.Text, pass.Password))
             {
-                MessageBox.Show("Welcome");
+                ControlPanel controlWindow = new ControlPanel();
+                App.Current.MainWindow = controlWindow;
+                this.Close();
+                controlWindow.Show();   
             }
             else
             {
